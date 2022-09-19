@@ -1,81 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/k_w.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Chess game simulator</title>
+		<script
+			defer
+			data-domain="paramjit.org"
+			src="https://plausible.paramjit.org/js/pls.js"></script>
+	</head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon"
-    type="image/svg+xml"
-    href="/chat-svgrepo-com.svg" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0" />
-  <title>Live Chat</title>
-  <link rel="stylesheet"
-    type="text/css"
-    href="./src/style.css" />
-</head>
-
-<body class="flex min-h-full min-w-full justify-around">
-  <div class="flex-auto max-w-sm min-h-screen flex flex-col justify-between">
-    <div class="m-4 text-justify">
-      <h1 class="text-4xl mb-2">Live chat</h1>
-      <p>Login in the adjacent window to start your live chat session. Choose a
-        room name, and share with the other participant and start chatting. Note
-        that since no cookies are used, your session will be lost if you refresh
-        the page. You can, however, re-join the chat if you remember the room
-        name.</p>
-    </div>
-    <div class="m-4">
-      Made by <a href="https://paramjit.org">Paramjit</a> (see the rest of the <a href="https://paramjit.org/portfolio">portfolio</a>) <br>
-      Using <a href="https://expressjs.com/">express.js</a>, <a href="https://socket.io/">socket.io</a>, <a href="https://tailwindcss.com/">TailwindCSS</a>, <a href="https://www.npmjs.com/">npm</a>, nodemon & <a href="https://vitejs.dev/">vite</a>. Using vanilla JS for the UI. <a class="underline"
-        href="https://github.com/busywhistling/live_chat">source</a>.
-    </div>
-  </div>
-  <div class="flex-auto flex flex-col">
-    <div id="login-info"
-      class="flex justify-around m-6">
-      <input id="username-input"
-        type="text"
-        class="border-solid border-2 w-1/4"
-        placeholder="Enter your username..." />
-      <input id="room-input"
-        type="text"
-        class="border-solid border-2 w-1/4"
-        placeholder="Enter the room you want to join..." />
-      <button id="button-input"
-        class="border-solid border-4">Submit</button>
-    </div>
-    <!-- the main chat window -->
-    <div class="flex-auto border-solid border-2 mt-32 mb-32 m-2 flex flex-col w-80 h-96">
-      <!-- chat window header -->
-      <div class="flex-none text-2xl font-bold text-slate-50 bg-slate-700 p-3">
-        Live chat
-      </div>
-      <!-- chat window body -->
-      <div id="chat-body"
-        class="flex-auto border-solid border-2 p-3 overflow-auto">
-        Your messages will appear here
-      </div>
-      <!-- chat window footer -->
-      <div class="flex-none border-solid border-2 h-16">
-        <div class="flex p-1">
-          <input id="current-message"
-            type="text"
-            class="w-full bg-slate-400 text-white placeholder:italic placeholder:text-white  h-12 p-3"
-            placeholder="Write a message..."
-            name="message">
-          <div id="button-send-message"
-            class="ml-1 h-12">
-            <button class="border-solid border-4 h-12 p-1">Send</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div id="app"></div>
-  </div>
-
-  <script type="module"
-    src="/src/main.ts"></script>
-</body>
-
+	<body>
+		<div id="root"></div>
+		<script type="module" src="/src/index.tsx"></script>
+	</body>
 </html>

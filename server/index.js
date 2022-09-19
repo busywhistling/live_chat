@@ -17,11 +17,11 @@ const io = new Server(server, {
 
 io.on('connection', (socket) => {
     // which user connected?
-    console.log('New user connected: ', socket.id);
+    console.log(`${socket.id} connected.`);
 
     socket.on("join_room", (roomID) => {
         socket.join(roomID);
-        console.log('User with ID:', socket.id, ' joined room:', roomID)
+        console.log(`${socket.id} joined room ${roomID}`)
     })
 
     socket.on('send_message', (data) => {
@@ -30,7 +30,7 @@ io.on('connection', (socket) => {
     })
 
     socket.on("disconnect", () => {
-        console.log('User disconnected: ', socket.id);
+        console.log(`${socket.id} disconnected.`);
     })
 })
 
